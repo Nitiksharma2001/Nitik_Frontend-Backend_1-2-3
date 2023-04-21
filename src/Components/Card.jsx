@@ -1,11 +1,13 @@
-import { DeleteOutlined, EditOutlined, GlobalOutlined, HeartFilled, HeartOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons';
+import { DeleteOutlined, GlobalOutlined, HeartFilled, HeartOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons';
 import {Card} from 'antd';
 import Modal from "./Modal"
 const { Meta } = Card;
 const App = ({user, setUsers}) => (
+  
   <Card
     style={{
-      backgroundColor:"#f5f5f5"
+      backgroundColor:"#f5f5f5",
+      margin:"0 30px"
     }}
     cover={
       <img style={{
@@ -25,7 +27,7 @@ const App = ({user, setUsers}) => (
           })
         })
       }}/>,
-      <EditOutlined  key="edit" onclick={<Modal/>} />,
+      <Modal user={user} setUsers={setUsers}/>,
       <DeleteOutlined onClick={() => {
         setUsers(prev => {
           return prev.filter(delUser => user !== delUser)

@@ -4,11 +4,11 @@ import Loading from "./Components/Loading";
 import "./App.css"
 function App() {
   const [Users, setUsers] = useState([]);
-  // useEffect(() => {
-  //   fetch("https://jsonplaceholder.typicode.com/users ")
-  //     .then((response) => response.json())
-  //     .then((data) => setUsers(data));
-  // }, []);
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users ")
+      .then((response) => response.json())
+      .then((data) => setUsers(data));
+  }, []);
   return (
     <>
       {Users.length !== 0 ? 
