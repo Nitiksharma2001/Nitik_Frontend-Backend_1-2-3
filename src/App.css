@@ -1,5 +1,15 @@
+.App{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.loading{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 body{
-	background-color: grey;
+	background-color: white;
 }
 .sk-chase {
 	width: 40px;
@@ -22,7 +32,7 @@ body{
 	display: block;
 	width: 25%;
 	height: 25%;
-	background-color: #fff;
+	background-color: black;
 	border-radius: 100%;
 	animation: sk-chase-dot-before 2.0s infinite ease-in-out both; 
   }
