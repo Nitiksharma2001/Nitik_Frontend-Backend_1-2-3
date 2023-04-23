@@ -5,7 +5,7 @@ import "./App.css"
 function App() {
   const [Users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users ")
+    fetch("http://localhost:4000/")
       .then((response) => response.json())
       .then((data) => setUsers(data));
   }, []);

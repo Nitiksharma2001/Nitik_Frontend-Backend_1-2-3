@@ -2,9 +2,8 @@ import { DeleteOutlined, GlobalOutlined, HeartFilled, HeartOutlined, MailOutline
 import {Card} from 'antd';
 import Modal from "./Modal"
 const { Meta } = Card;
-const App = ({user, setUsers}) => (
-  
-  <Card
+const App = ({user, setUsers, index}) => (
+  <Card 
     style={{
       backgroundColor:"#f5f5f5",
       margin:"0 30px"
@@ -34,6 +33,7 @@ const App = ({user, setUsers}) => (
         })
       }}/>
     ]}
+    
   >
     
     <Meta
@@ -52,5 +52,6 @@ const App = ({user, setUsers}) => (
       description={user.website}
     />
   </Card>
+
 );
 export default App;
